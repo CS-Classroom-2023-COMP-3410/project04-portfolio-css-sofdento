@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* General */
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Open Sans', Arial, sans-serif; /* Body text */
+}
+
+h1, h2, h3, .title {
+    font-family: 'Raleway', serif; /* Headings */
+}
+
+/* Color Palette */
+:root {
+    --primary-pink: #f8bbd0;
+    --dark-pink: #d47d92;
+    --text-dark: #333;
+    --white: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-pink) !important;
+}
+.navbar-item {
+    color: var(--text-dark) !important;
+}
+.navbar-item:hover {
+    background-color: var(--dark-pink) !important;
+    color: var(--white) !important;
+}
+
+/* Header (Hero) */
+.hero.is-primary {
+    background-color: var(--dark-pink) !important;
+    color: var(--white);
+}
+.hero.is-primary .title,
+.hero.is-primary .subtitle {
+    color: var(--white);
+}
+
+/* Buttons */
+.button.is-primary {
+    background-color: var(--primary-pink) !important;
+    color: var(--text-dark) !important;
+    border: 1px solid var(--dark-pink);
+}
+.button.is-primary:hover {
+    background-color: var(--white) !important;
+    color: var(--primary-pink) !important;
+    border: 1px solid var(--primary-pink);
+}
+
+/* Custom Shades of Pink */
+.button-pink-light {
+    background-color: #f8bbd0; /* Light pink */
+    color: #333;
+    border: 1px solid #d47d92; /* Medium pink border */
+}
+.button-pink-light:hover {
+    background-color: #d47d92; /* Medium pink */
+    color: #fff; /* White text on hover */
+}
+
+.button-pink-medium {
+    background-color: #d47d92; /* Medium pink */
+    color: #fff;
+    border: 1px solid #b03a5b; /* Darker pink border */
+}
+.button-pink-medium:hover {
+    background-color: #b03a5b; /* Dark pink */
+    color: #fff;
+}
+
+.button-pink-dark {
+    background-color: #b03a5b; /* Dark pink */
+    color: #fff;
+    border: 1px solid #80002f; /* Darkest pink border */
+}
+.button-pink-dark:hover {
+    background-color: #80002f; /* Darkest pink */
+    color: #fff;
+}
+
+.button-pink-soft {
+    background-color: #fcd6e1; /* Very light pink */
+    color: #333;
+    border: 1px solid #f8bbd0; /* Light pink border */
+}
+.button-pink-soft:hover {
+    background-color: #f8bbd0; /* Light pink */
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-pink) !important;
+    color: var(--white);
+}
+
+/* Box and Image Styling */
+.box, .image img {
+    border: 2px solid var(--primary-pink);
+    border-radius: 8px;
+}
+.box:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles */
+.title, .subtitle {
+    color: var(--text-dark);
+}
+
+/* Section Spacing */
+.section {
+    padding: 3rem 1.5rem;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.columns {
+    display: flex; /* Force flexbox layout */
+    flex-wrap: wrap; /* Prevent stacking on smaller screens */
+    justify-content: center; /* Center the images horizontally */
+}
+
+.columns .column {
+    flex: 1; /* Ensure both columns take equal space */
+}
+
+.image img {
+    max-width: 100%; /* Scale the images to fit their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Gallery Section */
+/* Ensure images stack properly */
+.gallery-section .columns {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap !important; /* Allow wrapping */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Default: Full width for mobile */
+.gallery-section .column {
+    flex: none; /* Prevent interference from global flex rules */
+    width: 100%; /* Stack vertically by default */
+    margin-bottom: 2rem; /* Add spacing between rows */
+}
+
+/* Two images per row for desktop */
+@media (min-width: 1024px) {
+    .gallery-section .column {
+        width: 48%; /* Two images per row */
+    }
+}
+
+/* Image Styling */
+.gallery-section .gallery-image img {
+    width: 100%; /* Scale images to fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+    margin-bottom: 1rem; /* Add spacing below images */
+}
